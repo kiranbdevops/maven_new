@@ -6,9 +6,10 @@ node('built-in')
 			git branch: 'feature/kiran', url: 'https://github.com/kiranbdevops/maven_new.git'
 		}
 	  }
-	stage(build'){
+	stage('build'){
 	      stage{
-	      sh 'mvn package'}
+	      sh 'mvn package'
+	           }
 	      }
 	
 }
