@@ -1,6 +1,6 @@
-pipeline
+node('built-in')
 { 
-	node any
+	
 	stages{
 		stage{
 			git branch: 'feature/kiran', url: 'https://github.com/kiranbdevops/maven_new.git'
