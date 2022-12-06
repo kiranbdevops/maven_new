@@ -14,9 +14,22 @@ pipeline
         {
             steps
             {
+                sh 'mvn clean'
+            }
+        }
+		stage('ContBuild2')
+        {
+            steps
+            {
+                sh 'mvn compile'
+            }
+        }
+		stage('ContBuild3')
+        {
+            steps
+            {
                 sh 'mvn package'
             }
         }
     }
 }
-
