@@ -7,7 +7,8 @@ pipeline
         {
             steps
             {
-                git branch: '*/feature/branch', url: 'https://github.com/kiranbdevops/maven_new.git'
+                git 'https://github.com/sunildevops77/maven.git'
             }
         }
     }
+
