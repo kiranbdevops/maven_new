@@ -10,6 +10,13 @@ pipeline
                 git 'https://github.com/sunildevops77/maven.git'
             }
         }
+		stage('ContBuild')
+        {
+            steps
+            {
+                sh 'mvn package'
+            }
+        }
     }
 }
 
