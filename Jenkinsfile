@@ -1,12 +1,10 @@
-node('built-in') 
-{
-    stage('Continuous Download') 
-	{
-    git 'https://github.com/sunildevops77/maven.git'
-	}
-    stage('Continuous Build') 
-	{
-    sh 'mvn package'
-	}
-
+pipeline
+{ 
+	node any
+	stages{
+		stage{
+			git branch: 'feature/kiran', url: 'https://github.com/kiranbdevops/maven_new.git'
+		}
+	  }
+	
 }
