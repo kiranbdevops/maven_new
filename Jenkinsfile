@@ -15,15 +15,21 @@ pipeline
 {
     agent any
     stages {
+        stage('Initialize')
+        {
+            steps {
+                stepInitialise()
+            }
+        }
     stage('ContinuousDownload') 
     {
-        steps{
+        steps {
          git 'https://github.com/selenium-saikrishna/maven.git'
         }
     }
     stage('ContinuousBuild') 
     {
-        steps{
+        steps {
          sh 'mvn clean package'
         }
     }
