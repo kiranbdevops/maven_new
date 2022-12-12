@@ -15,12 +15,12 @@ pipeline
 {
     agent any
     stages {
-        stage('Initialize')
-        {
-            steps {
-                stepInitialise()
-            }
-        }
+
+        stage('Initialise')
+              {
+                  steps {
+                      stepInitialise()
+                  }}
     stage('ContinuousDownload') 
     {
         steps {
