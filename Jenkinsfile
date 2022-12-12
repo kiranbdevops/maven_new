@@ -14,13 +14,14 @@
 pipeline
 {
     agent any
+    options { timeout(time: 30, units: 'MINUTES')}
     stages {
 
-        stage('Initialise')
-              {
-                  steps {
-                      stepInitialise()
-                  }}
+    //    stage('Initialise')
+    //         {
+    //             steps {
+    //                 stepInitialise()
+    //             }}
     stage('ContinuousDownload') 
     {
         steps {
