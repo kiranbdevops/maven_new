@@ -2,11 +2,12 @@ pipeline{
 agent any
 stages{
 stage('git checkout'){
+steps{
 script{
 git 'https://github.com/kiranbdevops/maven_new.git'
 }
 }
 }
-
+}
 
 }
