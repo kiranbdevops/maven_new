@@ -20,10 +20,19 @@ pipeline{
                 }
              }
 
-			 	stage('Maven Building'){
+		stage('Maven Building'){
         steps{
-         sh 'mvn clean package'
+         sh 'mvn clean install'
                 }
+             }
+
+		stage('Static code analysys'){
+        steps{
+			script{
+         withSonarQubeEnv(credentialsId: 'sonar-api')
+		 sh 'mvn clean package sonar:sonar'
+                }
+		}
              }
 
 
