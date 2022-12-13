@@ -1,0 +1,12 @@
+pipeline{
+agent any
+stages{
+stage('git checkout'){
+script{
+git 'https://github.com/kiranbdevops/maven_new.git'
+}
+}
+}
+
+
+}
